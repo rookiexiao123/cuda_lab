@@ -97,3 +97,31 @@ int main() {
     return 0;
 
 }
+
+
+/*
+import torch
+import torch.nn.functional as F
+import numpy as np
+
+# 输入张量 (N=1, C=1, H=5, W=5)
+x = torch.from_numpy(np.array([
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15],
+    [16, 17, 18, 19, 20],
+    [21, 22, 23, 24, 25]
+], dtype=np.float32).reshape(1, 1, 5, 5))
+
+# 卷积核 (K=1, C=1, R=3, S=3)
+w = torch.from_numpy(np.array([
+    [1, 0, -1],
+    [1, 0, -1],
+    [1, 0, -1]
+], dtype=np.float32).reshape(1, 1, 3, 3))
+
+# 前向卷积
+y = F.conv2d(x, w, stride=1, padding=0)
+
+print(y.numpy())
+*/
